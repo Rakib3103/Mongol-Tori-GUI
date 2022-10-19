@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="row ">
+  
+      <!--  Graph 1  -->
+        <div class="relative col-2  bg-info" style="height:35vh; width:20vw;">
+          <canvas class="h-5 w-5 " id="myChart1"></canvas>
+        </div>
+      <!--  end of Graph  -->
+        
+        <!--  Graph 2 -->
+        <div class="relative col-2 bg-warning" style="height:35vh; width:20vw;">
+          <canvas class="h-5 w-5 " id="myChart2"></canvas>
+        </div>
+      <!--  end of Graph 2 -->
+        <!--  Graph 3 -->
+        <div class="relative col-2 bg-light" style="height:35vh; width:20vw;">
+          <canvas class="h-5 w-5 " id="myChart3"></canvas>
+        </div>
+      <!--  end of Graph 3-->
+        <!--  Graph 4-->
+        <div class="relative col-2 bg-info" style="height:35vh; width:20vw;">
+          <canvas class="h-5 w-5 " id="myChart4"></canvas>
+        </div>
+      <!--  end of Graph 4-->
+        <!--  Graph 5-->
+        <div class="relative col-2 bg-warning" style="height:35vh; width:20vw;">
+          <canvas class="h-5 w-5 " id="myChart5"></canvas>
+        </div>
+      <!--  end of Graph 5-->
+         <!--  Graph 6-->
+        <div class="relative col-2 bg-light" style="height:35vh; width:20vw;">
+          <canvas class="h-5 w-5 " id="myChart6"></canvas>
+        </div>
+      <!--  end of Graph 6-->
+        <!--  Graph 7-->
+        <div class="relative col-2 bg-info" style="height:35vh; width:20vw;">
+          <canvas class="h-5 w-5 " id="myChart7"></canvas>
+        </div>
+      <!--  end of Graph 7-->
+        <!--  Graph 8-->
+        <div class="relative col-2 bg-warning" style="height:35vh; width:20vw;">
+          <canvas class="h-5 w-5 " id="myChart8"></canvas>
+        </div>
+      <!--  end of Graph 8-->
+        <!--  Graph 9-->
+        <div class="relative col-2 bg-light" style="height:35vh; width:20vw;">
+          <canvas class="h-5 w-5 " id="myChart9"></canvas>
+        </div>
+      <!--  end of Graph 9-->
+         <!--  Graph 10-->
+        <div class="relative col-2 bg-info" style="height:35vh; width:20vw;">
+          <canvas class="h-5 w-5 " id="myChart10"></canvas>
+        </div>
+      <!--  end of Graph 10-->
+        
+        <!--  Graph 11-->
+        <div class="relative col-2 bg-info" style="height:35vh; width:20vw;">
+          <canvas class="h-5 w-5 " id="myChart11"></canvas>
+        </div>
+      <!--  end of Graph 11-->
+          <!--  Graph 12-->
+        <div class="relative col-2 bg-warning" style="height:35vh; width:20vw;">
+          <canvas class="h-5 w-5 " id="myChart12"></canvas>
+        </div>
+      <!--  end of Graph 12-->
+           <!--  Graph 13-->
+        <div class="relative col-2 bg-light" style="height:35vh; width:20vw;">
+          <canvas class="h-5 w-5 " id="myChart13"></canvas>
+        </div>
+      <!--  end of Graph 13-->
+        
+         <!--  Graph 14-->
+        <div class="relative col-2 bg-info" style="height:35vh; width:20vw;">
+          <canvas class="h-5 w-5 " id="myChart14"></canvas>
+        </div>
+      <!--  end of Graph 14-->
+        
+         <!--  Graph 15-->
+        <div class="relative col-2 bg-warning" style="height:35vh; width:20vw;">
+          <canvas class="h-5 w-5 " id="myChart15"></canvas>
+        </div>
+      <!--  end of Graph 15-->
+        
+      </div>
+    
+    
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="myscript.js"></script>
+  </body>
+</html>
+
+<script>
+    const labels = [
+    '0',
+    '2',
+
+  ];
+
+ 
+
+//1
+
+
+  const data1 = {
+    labels: labels,
+    datasets: [{
+      label: 'Oxygen Concentration',
+      backgroundColor: 'rgb(255, 99, 132)',
+      borderColor: 'rgb(255, 99, 132)',
+      data: [0.6, 0.8, 1, 1.2, 1.4],
+    }]
+  };
+
+  const config1 = {
+    type: 'line',
+    data: data1,
+    options: {}
+  };
+
+  const myChart1 = new Chart(
+    document.getElementById('myChart1'),
+    config1
+  );
+
+// 2
+
+const data2 = {
+    labels: labels,
+    datasets: [{
+      label: 'Hydrogen Concentration',
+      backgroundColor: 'rgb(255, 99, 132)',
+      borderColor: 'rgb(255, 99, 132)',
+      data: [0, 10, 50, 2, 20, 30],
+    }]
+  };
+
+  const config2 = {
+    type: 'line',
+    data: data2,
+    options: {}
+  };
+
+  const myChart2 = new Chart(
+    document.getElementById('myChart2'),
+    config2
+  );
+
+// 3
+
+const data3 = {
+    labels: labels,
+    datasets: [{
+      label: 'light',
+      backgroundColor: 'rgb(255, 99, 132)',
+      borderColor: 'rgb(255, 99, 132)',
+      data: [0, 10, 50, 2, 20, 30],
+    }]
+  };
+
+  const config3 = {
+    type: 'line',
+    data: data3,
+    options: {}
+  };
+
+  const myChart3 = new Chart(
+    document.getElementById('myChart3'),
+    config3
+  );
+//4
+const data4 = {
+    labels: labels,
+    datasets: [{
+      label: 'UV ray',
+      backgroundColor: 'rgb(0, 0, 0)',
+      borderColor: 'rgb(255, 99, 132)',
+      data: [0, 10, 50, 2, 20, 30],
+    }]
+  };
+
+  const config4 = {
+    type: 'line',
+    data: data1,
+    options: {}
+  };
+
+  const myChart4 = new Chart(
+    document.getElementById('myChart4'),
+    config1
+  );
+
+//5
+const data5 = {
+    labels: labels,
+    datasets: [{
+      label: 'Atmospheric Pressure',
+      backgroundColor: 'rgb(255, 99, 132)',
+      borderColor: 'rgb(255, 99, 132)',
+      data: [0, 10, 50, 2, 20, 30],
+    }]
+  };
+
+  const config5 = {
+    type: 'line',
+    data: data5,
+    options: {}
+  };
+
+  const myChart5 = new Chart(
+    document.getElementById('myChart5'),
+    config5
+  );
+
+//6
+const data6 = {
+    labels: labels,
+    datasets: [{
+      label: 'Carbon Monoxide',
+      backgroundColor: 'rgb(255, 99, 132)',
+      borderColor: 'rgb(255, 99, 132)',
+      data: [0, 10, 50, 2, 20, 30],
+    }]
+  };
+
+  const config6 = {
+    type: 'line',
+    data: data6,
+    options: {}
+  };
+
+  const myChart6 = new Chart(
+    document.getElementById('myChart6'),
+    config6
+  );
+
+//7
+const data7 = {
+    labels: labels,
+    datasets: [{
+      label: 'Methane Concentration',
+      backgroundColor: 'rgb(255, 99, 132)',
+      borderColor: 'rgb(255, 99, 132)',
+      data: [0, 10, 50, 2, 20, 30],
+    }]
+  };
+
+  const config7 = {
+    type: 'line',
+    data: data7,
+    options: {}
+  };
+
+  const myChart7 = new Chart(
+    document.getElementById('myChart7'),
+    config7
+  );
+
+//8
+const data8 = {
+    labels: labels,
+    datasets: [{
+      label: 'Flammable gas',
+      backgroundColor: 'rgb(255, 99, 132)',
+      borderColor: 'rgb(255, 99, 132)',
+      data: [0, 10, 50, 2, 20, 30],
+    }]
+  };
+
+  const config8 = {
+    type: 'line',
+    data: data8,
+    options: {}
+  };
+
+  const myChart8 = new Chart(
+    document.getElementById('myChart8'),
+    config8
+  );
+
+//9
+const data9= {
+    labels: labels,
+    datasets: [{
+      label: 'Temperature',
+      backgroundColor: 'rgb(255, 99, 132)',
+      borderColor: 'rgb(255, 99, 132)',
+      data: [0, 10, 50, 2, 20, 30],
+    }]
+  };
+
+  const config9 = {
+    type: 'line',
+    data: data9,
+    options: {}
+  };
+
+  const myChart9 = new Chart(
+    document.getElementById('myChart9'),
+    config9
+  );
+
+//10
+const data10= {
+    labels: labels,
+    datasets: [{
+      label: 'Moisture',
+      backgroundColor: 'rgb(255, 99, 132)',
+      borderColor: 'rgb(255, 99, 132)',
+      data: [0, 10, 50, 2, 20, 30],
+    }]
+  };
+
+  const config10 = {
+    type: 'line',
+    data: data10,
+    options: {}
+  };
+
+  const myChart10 = new Chart(
+    document.getElementById('myChart10'),
+    config10
+  );
+
+
+//11
+const data11= {
+    labels: labels,
+    datasets: [{
+      label: 'Air Quality',
+      backgroundColor: 'rgb(255, 99, 132)',
+      borderColor: 'rgb(255, 99, 132)',
+      data: [0, 10, 50, 2, 20, 30],
+    }]
+  };
+
+  const config11 = {
+    type: 'line',
+    data: data11,
+    options: {}
+  };
+
+  const myChart11 = new Chart(
+    document.getElementById('myChart11'),
+    config11
+  );
+
+//12
+const data12= {
+    labels: labels,
+    datasets: [{
+      label: 'Carbon Dioxide',
+      backgroundColor: 'rgb(255, 99, 132)',
+      borderColor: 'rgb(255, 99, 132)',
+      data: [0, 10, 50, 2, 20, 30],
+    }]
+  };
+
+  const config12 = {
+    type: 'line',
+    data: data12,
+    options: {}
+  };
+
+  const myChart12 = new Chart(
+    document.getElementById('myChart12'),
+    config12
+  );
+
+//13
+const data13= {
+    labels: labels,
+    datasets: [{
+      label: 'Smoke',
+      backgroundColor: 'rgb(255, 99, 132)',
+      borderColor: 'rgb(255, 99, 132)',
+      data: [0, 10, 50, 2, 20, 30],
+    }]
+  };
+
+  const config13 = {
+    type: 'line',
+    data: data13,
+    options: {}
+  };
+
+  const myChart13 = new Chart(
+    document.getElementById('myChart13'),
+    config13
+  );
+
+//14
+const data14= {
+    labels: labels,
+    datasets: [{
+      label: 'Alcohol',
+      backgroundColor: 'rgb(255, 99, 132)',
+      borderColor: 'rgb(255, 99, 132)',
+      data: [0, 10, 50, 2, 20, 30],
+    }]
+  };
+
+  const config14 = {
+    type: 'line',
+    data: data14,
+    options: {}
+  };
+
+  const myChart14 = new Chart(
+    document.getElementById('myChart14'),
+    config14
+  );
+
+//15
+const data15= {
+    labels: labels,
+    datasets: [{
+      label: 'Ammonia',
+      backgroundColor: 'rgb(255, 99, 132)',
+      borderColor: 'rgb(255, 99, 132)',
+      data: [0, 10, 50, 2, 20, 30],
+    }]
+  };
+
+  const config15 = {
+    type: 'line',
+    data: data15,
+    options: {}
+  };
+
+  const myChart15 = new Chart(
+    document.getElementById('myChart15'),
+    config15
+  );
+
+</script>
